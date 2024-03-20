@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import InstagramIcon from "../components/icons/Instagram.astro";
+import EquisIcon from "../components/icons/Equis.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<Layout 
+	title="Portfolio Andres Romero"
+	description="Contrata a Andres para crear tu aplicación web o móvil."
+>
+	<main>
+		<section class="w-full mx-auto lg:w-[740px]  py-44">
+			<img
+			class="rounded-full w-12 h-12 mb-4"
+			src="https://avatars.githubusercontent.com/u/57555202?v=4"
+			alt="arromero"
+		/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, soy Andrés Romero <a
+					href="https://www.linkedin.com/in/arromero491/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>+2 años de experiencia.</span> 
+				<span class="text-yellow-200/90"> Software Developer. </span>
+				<span class="text-red-100/90">De Ciudad de México.</span>
+				<span class="opacity-85">Enfocado en desarrollo de aplicaciones web y móviles.</span>
+				
+			</h2>
+			<nav class="flex gap-x-2 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/arromero491/">
+					<LinkedInIcon class="size-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/arromero4">
+					<GithubIcon class="size-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://twitter.com/arromero491">
+					<EquisIcon class="size-6"/>
+					Twitter
+				</SocialPill>				
+				<SocialPill href="https://www.instagram.com/arromero491/">
+					<InstagramIcon class="size-6"/>
+					Instagram
+				</SocialPill>
+				<SocialPill href="">
+					<MailIcon class="size-6"/>
+					arromero0408@gmail.com
+				</SocialPill>
+			</nav>
+
+
+		</section>
+	</main>
+</Layout>
