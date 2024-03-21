@@ -2,7 +2,7 @@
 
 <!-- Coloca una imagen representativa de tu desarrollo siempre que puedas -->
 
-![Texto ALT de la imagen que utilices para mostrar el proyecto](https://images.unsplash.com/photo-1521985179118-6008b8cef2c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![Texto ALT de la imagen que utilices para mostrar el proyecto](public/projects/project-portfolio-arromero.jpg)
 
 ## Descripción
 
