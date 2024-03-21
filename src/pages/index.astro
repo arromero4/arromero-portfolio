@@ -1,27 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import InstagramIcon from "../components/icons/Instagram.astro";
 import EquisIcon from "../components/icons/Equis.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+
 import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout 
+<Layout
 	title="Portfolio Andres Romero"
 	description="Contrata a Andres para crear tu aplicación web o móvil."
 >
-	<main>
-		<section class="w-full mx-auto lg:w-[740px]  py-44">
+	<main class="px-4">
+		<SectionContainer class="py-40 pb-22">
 			<img
-			class="rounded-full w-12 h-12 mb-4"
-			src="https://avatars.githubusercontent.com/u/57555202?v=4"
-			alt="arromero"
-		/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				class="rounded-full w-12 h-12 mb-4"
+				src="https://avatars.githubusercontent.com/u/57555202?v=4"
+				alt="arromero"
+			/>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
 				Hey, soy Andrés Romero <a
 					href="https://www.linkedin.com/in/arromero491/"
 					target="_blank"
@@ -31,37 +40,52 @@ import SocialPill from "../components/SocialPill.astro";
 					<Badge>Disponible para trabajar</Badge></a
 				>
 			</h1>
-			<h2 class="text-2xl text-wrap">
-				<span>+2 años de experiencia.</span> 
+			<h2 class="text-xl lgtext-2xl text-wrap max-w-[700px]">
+				<span>+2 años de experiencia.</span>
 				<span class="text-yellow-200/90"> Software Developer. </span>
 				<span class="text-red-100/90">De Ciudad de México.</span>
-				<span class="opacity-85">Enfocado en desarrollo de aplicaciones web y móviles.</span>
-				
+				<span class="opacity-85"
+					>Enfocado en desarrollo de aplicaciones web y móviles.</span
+				>
 			</h2>
-			<nav class="flex gap-x-2 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/arromero491/">
-					<LinkedInIcon class="size-6"/>
+					<LinkedInIcon class=" size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/arromero4">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class=" size-4 md:size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="https://twitter.com/arromero491">
-					<EquisIcon class="size-6"/>
+					<EquisIcon class=" size-4 md:size-6" />
 					Twitter
-				</SocialPill>				
+				</SocialPill>
 				<SocialPill href="https://www.instagram.com/arromero491/">
-					<InstagramIcon class="size-6"/>
+					<InstagramIcon class=" size-4 md:size-6" />
 					Instagram
 				</SocialPill>
-				<SocialPill href="">
-					<MailIcon class="size-6"/>
+				<SocialPill href="mailto:arromero0408@gmail.com">
+					<MailIcon class="size-6" />
 					arromero0408@gmail.com
 				</SocialPill>
 			</nav>
+		</SectionContainer>
 
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
 
-		</section>
 	</main>
 </Layout>

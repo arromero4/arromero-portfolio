@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Enero 2023 - Actualmente...",
+    title: "Software Developer Freelance",
+    company: "No aplica",
+    description:
+      "Soy un desarrollador altamente motivado con una base en Estructuras de Datos y Algoritmos, Flutter y React. Mi viaje en la programación comenzó en 2021, y desde entonces, he estado constantemente mejorando mis habilidades a través del aprendizaje autodirigido. Como desarrollador independiente especializado en las tecnologóas mencionadas, he participado activamente en el campo desde 2023, aprovechando estas poderosas tecnologías para crear aplicaciones. Además de compartir mi aprendizaje en redes sociales para aportar conocimiento a la comunidad.",
+    link: "https://www.linkedin.com/in/arromero491/",
+  },
+  {
+    date: "Mayo 2016 - Actualmente...",
+    title: "Ingeniero de Construcción y Mantenimiento Staff",
+    company: "Uninet S.A. de C.V.",
+    description:
+      "Crear documentación técnica, procedimientos e informes utilizando mis conocimientos de programación para entregar a tiempo las facturas de los contratistas. Tiempo reducido de 7 días a 1 día. Responsable del soporte técnico y operación de sucursales Telmex que proporciona servicios internos en CDMX, Estado de México y Guerrero (+190 sucursales). Ejecutar ventanas de mantenimiento e intervenciones en coordinación con contratistas (2 a 4 personas por actividad). Comunicación efectiva con contratistas internos y externos. Revisiones preventivas de la infraestructura de TI para asegurar la disponibilidad del servicio.",
+  },
+]
+
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map(experience => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience}/>
+        </li>
+    ))
+  }
+  
+</ol>
