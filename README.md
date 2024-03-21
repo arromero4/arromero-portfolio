@@ -13,7 +13,7 @@ Bienvenido a mi portafolio de desarrollo de software, un espacio donde he recopi
 
 ## Tecnologías utilizadas
 
-Haz un listado de todas las tecnologías que se utilizaron para el desarrollo con una breve descripción de su finalidad. Por ejemplo:
+Listado de  las tecnologías que utilicé para el desarrollo de mi portafolio. 
 
 ✅ Astro --> Como framework principal  
 ✅ Tailwind CSS --> Para los estilos  
@@ -21,7 +21,6 @@ Haz un listado de todas las tecnologías que se utilizaron para el desarrollo co
 ✅ Fontsource --> Para la fuente utilizada
 
 ## Comandos / Indicaciones técnicas
-
 
 | Comando                  | Acción realizada                                   |
 | :---------------------   | :------------------------------------------------- |
@@ -41,7 +40,7 @@ Aquí encontrarás una selección de mis proyectos más significativos, que abar
 
 ## Aprendizajes
 
-Al desarrollar tu primer portafolio utilizando Astro, React y TailwindCSS, has adquirido un conjunto valioso de habilidades y conocimientos que te servirán en tu camino como desarrollador de software. 
+Al desarrollar mi primer portafolio utilizando Astro, React y TailwindCSS, he adquirido un conjunto valioso de habilidades y conocimientos que me servirán en mi camino como desarrollador de software. 
 
 Astro para este tipo de proyectos es una opción muy recomendada, seguiremos mejorando nuestras habilidades con la practica y creación de más proyectos.
 
