@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GithubIcon from "../components/icons/Github.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import InstagramIcon from "../components/icons/Instagram.astro";
 import EquisIcon from "../components/icons/Equis.astro";
@@ -22,7 +22,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 	description="Contrata a Andres para crear tu aplicación web o móvil."
 >
 	<main class="px-4">
-		<SectionContainer class="py-40 pb-22">
+		<SectionContainer class="py-40 pb-32">
 			<img
 				class="rounded-full w-12 h-12 mb-4"
 				src="https://avatars.githubusercontent.com/u/57555202?v=4"
@@ -73,14 +73,15 @@ import SectionContainer from "../components/SectionContainer.astro";
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
 				<Briefcase class="size-7" />
 				Experiencia Laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
+
 		<SectionContainer id="projects">
-			<h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
 				<CodeIcon class="size-7" />
 				Proyectos
 			</h2>

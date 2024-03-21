@@ -1,3 +1,118 @@
 ---
-const
+import NextJSIcon from "./icons/NextJS.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
+import ReactJSIcon from "./icons/ReactJS.astro";
+import AstroIcon from "./icons/AstroLogo.astro";
+import DartIcon from "./icons/Dart.astro";
+import FirebaseIcon from "./icons/Firebase.astro";
+import FlutterIcon from "./icons/Flutter.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import GoogleIcon from "./icons/Google.astro";
+import MaterialUIIcon from "./icons/MaterialUI.astro";
+import MySQLIcon from "./icons/MySQL.astro";
+import NetlifyIcon from "./icons/Netlify.astro";
+import ViteJSIcon from "./icons/ViteJS.astro";
+
+const TAGS = {
+  ASTROICON: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
+  DART: {
+    name: "Dart",
+    class: "bg-black text-white",
+    icon: DartIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-black text-white",
+    icon: FirebaseIcon,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-black text-white",
+    icon: FlutterIcon,
+  },
+  GOOGLE: {
+    name: "Google Maps API",
+    class: "bg-black text-white",
+    icon: GoogleIcon,
+  },
+  GITHUB: {
+    name: "Github",
+    class: "bg-black text-white",
+    icon: GithubIcon,
+  },
+  MATERIALUI: {
+    name: "Material UI",
+    class: "bg-black text-white",
+    icon: MaterialUIIcon,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-black text-white",
+    icon: MySQLIcon,
+  },
+  NETLIFY: {
+    name: "Netlify",
+    class: "bg-black text-white",
+    icon: NetlifyIcon,
+  },
+  NEXTJS: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJSIcon,
+  },
+  REACT: {
+    name: "React JS",
+    class: "bg-[#003159] text-white",
+    icon: ReactJSIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  VITEJS: {
+    name: "ViteJS",
+    class: "bg-[#003159] text-white",
+    icon: ViteJSIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Travel Advisor",
+    description:
+      "Construí y desplegué una aplicación avanzada compañero de viaje utilizando Google Maps. Con Geolocalización, API de Google Maps, Búsqueda de lugares, Obtención de restaurantes, hoteles y atracciones basadas en la ubicación de las API Rapid especializadas, filtrado de datos y mucho más.",
+    link: "https://travel-advisor-arromero.netlify.app/",
+    github: "https://github.com/arromero4/travel-advisor",
+    image: "/projects/project-portfolio-1.jpg", //"React", "MaterialUI", "Netlify", "Google Maps API"
+    tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.NETLIFY, TAGS.GOOGLE],
+  },
+];
 ---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
