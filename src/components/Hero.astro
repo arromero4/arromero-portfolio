@@ -1,0 +1,63 @@
+---
+const personalImageAlt = "Andres Romero";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import InstagramIcon from "../components/icons/Instagram.astro";
+import EquisIcon from "../components/icons/Equis.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="https://avatars.githubusercontent.com/u/57555202?v=4"
+      alt={personalImageAlt}
+    />
+    <a
+    href="https://www.linkedin.com/in/arromero491/"
+    target="_blank"
+    rel="noopener"
+    class="flex items-center transition md:justify-center md:hover:scale-105"
+  >
+    <Badge>Disponible para trabajar</Badge></a
+  >
+
+</div>
+    <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hey, soy Andrés Romero
+    </h1>
+
+
+<p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+  +2 años de experiencia.
+  <strong> Software Developer. </strong> De Ciudad de México.
+  Enfocado en desarrollo de aplicaciones web y móviles.
+</p>
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <SocialPill href="https://www.linkedin.com/in/arromero491/">
+    <LinkedInIcon class="size-4 md:size-6" />
+    LinkedIn
+  </SocialPill>
+  <SocialPill href="https://github.com/arromero4">
+    <GithubIcon class="size-4 md:size-6" />
+    GitHub
+  </SocialPill>
+  <SocialPill href="https://twitter.com/arromero491">
+    <EquisIcon class="size-4 md:size-6" />
+    Twitter
+  </SocialPill>
+  <SocialPill href="https://www.instagram.com/arromero491/">
+    <InstagramIcon class="size-4 md:size-6" />
+    Instagram
+  </SocialPill>
+  <SocialPill href="mailto:arromero0408@gmail.com">
+    <MailIcon class="size-6" />
+    arromero0408@gmail.com
+  </SocialPill>
+</nav>
+</div>

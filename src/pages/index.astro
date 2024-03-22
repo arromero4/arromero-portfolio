@@ -2,18 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GithubIcon from "../components/icons/GithubIcon.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import InstagramIcon from "../components/icons/Instagram.astro";
-import EquisIcon from "../components/icons/Equis.astro";
+
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
 
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
-
+import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro";
 ---
 
@@ -23,53 +19,9 @@ import SectionContainer from "../components/SectionContainer.astro";
 >
 	<main class="px-4">
 		<SectionContainer class="py-40 pb-32">
-			<img
-				class="rounded-full w-12 h-12 mb-4"
-				src="https://avatars.githubusercontent.com/u/57555202?v=4"
-				alt="arromero"
-			/>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				Hey, soy Andrés Romero <a
-					href="https://www.linkedin.com/in/arromero491/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Badge>Disponible para trabajar</Badge></a
-				>
-			</h1>
-			<h2 class="text-xl lgtext-2xl text-wrap max-w-[700px]">
-				<span>+2 años de experiencia.</span>
-				<span class="text-yellow-200/90"> Software Developer. </span>
-				<span class="text-red-100/90">De Ciudad de México.</span>
-				<span class="opacity-85"
-					>Enfocado en desarrollo de aplicaciones web y móviles.</span
-				>
-			</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/arromero491/">
-					<LinkedInIcon class=" size-4 md:size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/arromero4">
-					<GithubIcon class=" size-4 md:size-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="https://twitter.com/arromero491">
-					<EquisIcon class=" size-4 md:size-6" />
-					Twitter
-				</SocialPill>
-				<SocialPill href="https://www.instagram.com/arromero491/">
-					<InstagramIcon class=" size-4 md:size-6" />
-					Instagram
-				</SocialPill>
-				<SocialPill href="mailto:arromero0408@gmail.com">
-					<MailIcon class="size-6" />
-					arromero0408@gmail.com
-				</SocialPill>
-			</nav>
+      <Hero>
+      </slot>
+    </Hero>
 		</SectionContainer>
 
 		<SectionContainer id="experience">
