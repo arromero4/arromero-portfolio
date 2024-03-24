@@ -12,56 +12,59 @@ import MaterialUIIcon from "./icons/MaterialUI.astro";
 import MySQLIcon from "./icons/MySQL.astro";
 import NetlifyIcon from "./icons/Netlify.astro";
 import ViteJSIcon from "./icons/ViteJS.astro";
+import LinkIcon from "./icons/Link.astro";
+
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   ASTROICON: {
     name: "Astro",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: AstroIcon,
   },
   DART: {
     name: "Dart",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: DartIcon,
   },
   FIREBASE: {
     name: "Firebase",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: FirebaseIcon,
   },
   FLUTTER: {
     name: "Flutter",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: FlutterIcon,
   },
   GOOGLE: {
     name: "Google Maps API",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: GoogleIcon,
   },
   GITHUB: {
     name: "Github",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: GithubIcon,
   },
   MATERIALUI: {
     name: "Material UI",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: MaterialUIIcon,
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: MySQLIcon,
   },
   NETLIFY: {
     name: "Netlify",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: NetlifyIcon,
   },
   NEXTJS: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-gray-400/50 text-white",
     icon: NextJSIcon,
   },
   REACT: {
@@ -87,32 +90,57 @@ const PROJECTS = [
       "Construí y desplegué una aplicación avanzada compañero de viaje utilizando Google Maps. Con Geolocalización, API de Google Maps, Búsqueda de lugares, Obtención de restaurantes, hoteles y atracciones basadas en la ubicación de las API Rapid especializadas, filtrado de datos y mucho más.",
     link: "https://travel-advisor-arromero.netlify.app/",
     github: "https://github.com/arromero4/travel-advisor",
-    image: "/projects/project-portfolio-1.jpg", //"React", "MaterialUI", "Netlify", "Google Maps API"
+    image: "/projects/project-portfolio-1.jpg",
     tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.NETLIFY, TAGS.GOOGLE],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row">
-        {tags.map((tag) => (
-          <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
-}
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GithubIcon class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <LinkIcon class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

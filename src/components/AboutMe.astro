@@ -1,0 +1,40 @@
+---
+const personalImageAlt = "Andres Romero";
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo Andres. Empecé en la programación con Java cuando iba en la
+      Universidad.
+      <strong>Actualmente trabajando en redes y en una empresa nacional.</strong
+      >
+    </p>
+
+    <p>
+      Algunos de mis éxitos incluyen <strong
+        >colaborar con la automatización de proyectos en mi actual trabajo.</strong
+      > Hoy en día estos reportes agilizan la entrega de información en tiempo y
+      forma con los proveedores.
+    </p>
+
+    <p>
+      Como creador de contenido, <strong
+        >aporto contenido en Español acerca de Dart, Flutter y React para<em
+          class="italic">Desarrollo web y móvil</em
+        > en Twitter, Threads, Instagram y Tiktok</strong
+      >. Mi objetivo es crear una comunidad de Flutter en México.
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/projects/profile.jpg"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>

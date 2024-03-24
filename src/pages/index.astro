@@ -5,12 +5,12 @@ import Badge from "../components/Badge.astro";
 
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
-
-import SocialPill from "../components/SocialPill.astro";
+import AboutMe from "../components/AboutMe.astro"
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro"
 ---
 
 <Layout
@@ -23,22 +23,36 @@ import SectionContainer from "../components/SectionContainer.astro";
       </slot>
     </Hero>
 		</SectionContainer>
-
+    <div class="space-y-24">
 		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
-				<Briefcase class="size-7" />
+			<h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+			<Briefcase class="size-8" />
 				Experiencia Laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="projects">
-			<h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
+			<h2
+			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+		>
 				<CodeIcon class="size-7" />
 				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
 
+		<SectionContainer id="aboutme">
+			<h2
+			class="flex items-center mb-8 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+		>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+	</div>
 	</main>
 </Layout>
