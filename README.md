@@ -6,7 +6,7 @@
 
 ## Descripción
 
-4. No olvides colocar un link al **deploy**. 
+**deploy**. 
 
 Bienvenido a mi portafolio de desarrollo de software, un espacio donde he recopilado los proyectos y experiencias que reflejan mi pasión y habilidades en el mundo de la programación. Este portafolio está construido utilizando las tecnologías de Astro y TailwindCSS, combinando la eficiencia de generación de sitios estáticos con la potencia Astro.
 
