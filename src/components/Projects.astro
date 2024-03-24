@@ -13,48 +13,49 @@ import MySQLIcon from "./icons/MySQL.astro";
 import NetlifyIcon from "./icons/Netlify.astro";
 import ViteJSIcon from "./icons/ViteJS.astro";
 import LinkIcon from "./icons/Link.astro";
+import TypeScriptIcon from "./icons/Typescript.astro";
 
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   ASTROICON: {
     name: "Astro",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: AstroIcon,
   },
   DART: {
     name: "Dart",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: DartIcon,
   },
   FIREBASE: {
     name: "Firebase",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: FirebaseIcon,
   },
   FLUTTER: {
     name: "Flutter",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: FlutterIcon,
   },
   GOOGLE: {
     name: "Google Maps API",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: GoogleIcon,
   },
   GITHUB: {
     name: "Github",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: GithubIcon,
   },
   MATERIALUI: {
     name: "Material UI",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: MaterialUIIcon,
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: MySQLIcon,
   },
   NETLIFY: {
@@ -64,7 +65,7 @@ const TAGS = {
   },
   NEXTJS: {
     name: "Next.js",
-    class: "bg-gray-400/50 text-white",
+    class: "bg-[#003159] text-white",
     icon: NextJSIcon,
   },
   REACT: {
@@ -76,6 +77,11 @@ const TAGS = {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScriptIcon,
   },
   VITEJS: {
     name: "ViteJS",
@@ -93,6 +99,37 @@ const PROJECTS = [
     image: "/projects/project-portfolio-1.jpg",
     tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.NETLIFY, TAGS.GOOGLE],
   },
+  {
+    title: "Shopping App",
+    description: "Aplicación construida usando Flutter, para manejar el estado con Provider, permitiendo añadir la compra al carrito y borrarla, esta aplicación se adapta a la versión web con la misma base de código.",
+    github: "https://github.com/arromero4/shopping_app",
+    image: "/projects/project-portfolio-2.jpg",
+    tags: [TAGS.FLUTTER, TAGS.DART],
+  },
+  {
+    title: "Valentine Day App",
+    description:
+      "App para construída para el día del amor y la amistad usando React con TypeScript, desplegada en Netlify.",
+    link: "https://love-u-mfc.netlify.app/",
+    github: "https://github.com/arromero4/valentines-day",
+    image: "/projects/project-portfolio-1.jpg",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NETLIFY],
+  },
+  {
+    title: "Weather App",
+    description: "Aplicación construida usando Flutter, para consumir la API del clima de una ciudad especifica.",
+    github: "https://github.com/arromero4/weather_app_flutter",
+    image: "/projects/project-portfolio-4.jpg",
+    tags: [TAGS.FLUTTER, TAGS.DART],
+  },
+  {
+    title: "Currency Converter App",
+    description: "Aplicación construida usando Flutter, para realizar la conversión de Dolar a Peso Mexicano",
+    github: "https://github.com/arromero4/currency_converter",
+    image: "/projects/project-portfolio-3.jpg",
+    tags: [TAGS.FLUTTER, TAGS.DART],
+  },
+
 ];
 ---
 
