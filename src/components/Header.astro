@@ -1,5 +1,9 @@
 ---
+import { ButtonLanguage } from "./ButtonLanguage"
 import ThemeToggle from "./ThemeToggle.astro"
+
+
+
 
 const navItems = [
   {
@@ -13,7 +17,7 @@ const navItems = [
     url: "/#projects",
   },
   {
-    title: "Sobre mí",
+    title: "Sobre mi",
     label: "sobre-mi",
     url: "/#aboutme",
   },
@@ -23,6 +27,8 @@ const navItems = [
     url: "mailto:arromero0408@gmail.com",
   },
 ]
+
+
 ---
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
@@ -42,10 +48,17 @@ const navItems = [
       ))
     }
     <ThemeToggle />
+    <ButtonLanguage client:load/>
   </nav>
 </header>
 
+
+
+
+
 <script>
+
+
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
     const navItems = document.querySelectorAll("header nav a")
