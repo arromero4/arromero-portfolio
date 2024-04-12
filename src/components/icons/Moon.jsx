@@ -1,5 +1,8 @@
-<svg
-{...Astro.props}
+import React from "react";
+
+function MoonIcon(){
+  return(
+    <svg
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -10,8 +13,9 @@
     stroke-linejoin="round"
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"/>
-  <path d="M7 20h10"/>
-  <path d="M9 16v4"/>
-  <path d="M15 16v4"/>
+  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/>
 </svg>
+  )
+}
+
+export default MoonIcon;

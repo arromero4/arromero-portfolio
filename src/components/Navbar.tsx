@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useLanguageStore } from "../store";
 import { ButtonLanguage } from "./ButtonLanguage"
+import { ThemeToggle} from "./ThemeToggle"
 import '../style.css'
-import ThemeToggle from "./ThemeToggle.astro";
+
 
 export const NavbarMain = () => {
   const { inSpanish } = useLanguageStore();
@@ -103,7 +104,7 @@ return (
       )
     )      
     }
-<ThemeToggle />
+    <ThemeToggle />
     <ButtonLanguage/>
   </nav>
 
@@ -111,7 +112,6 @@ return (
 
 )  
 }
-
 
 
 

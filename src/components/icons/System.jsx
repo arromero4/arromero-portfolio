@@ -1,5 +1,8 @@
-<svg
-{...Astro.props}
+import React from "react";
+
+function SystemIcon(){
+  return (
+    <svg
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -15,3 +18,7 @@
   <path d="M9 16v4"/>
   <path d="M15 16v4"/>
 </svg>
+  )
+}
+
+export default SystemIcon;
