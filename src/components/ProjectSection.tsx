@@ -1,4 +1,3 @@
-import React from 'react';
 // Importa el hook que acabas de crear
 import { useSectionTitles } from './Titles'; // Asegúrate que la ruta sea la correcta
 
