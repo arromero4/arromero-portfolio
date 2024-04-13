@@ -3,16 +3,19 @@ import Layout from "../layouts/Layout.astro";
 
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
-import AboutMe from "../components/AboutMe.astro"
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
+import {AboutMe} from "../components/AboutMe"
+import {Experience} from "../components/Experience";
+import {Projects} from "../components/Projects";
 import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro"
+
+
+import ProjectSection from '../components/ProjectSection';
 ---
 
 <Layout
-	title="Portfolio Andres Romero"
+	title="Portafolio Andres Romero"
 	description="Contrata a Andres para crear tu aplicación web o móvil."
 >
 	<main class="px-4">
@@ -27,9 +30,9 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro"
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
 			<Briefcase class="size-8" />
-				Experiencia Laboral
+				<ProjectSection id={1} client:load />
 			</h2>
-			<Experience />
+			<Experience client:load/>
 		</SectionContainer>
 
 		<SectionContainer id="projects">
@@ -37,9 +40,9 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro"
 			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
 		>
 				<CodeIcon class="size-7" />
-				Proyectos
+				<ProjectSection id={2} client:load />
 			</h2>
-			<Projects />
+			<Projects client:load/>
 		</SectionContainer>
 
 		<SectionContainer id="aboutme">
@@ -47,9 +50,9 @@ import ProfileCheck from "../components/icons/ProfileCheck.astro"
 			class="flex items-center mb-8 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
 		>
         <ProfileCheck class="size-8" />
-        Sobre mí
+        <ProjectSection id={3} client:load />
       </h2>
-      <AboutMe />
+      <AboutMe client:load/>
     </SectionContainer>
 	</div>
 	</main>
