@@ -27,3 +27,12 @@
       opacity: 1;
     }
   }
+
+  svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  #aboutme-image{
+    object-position: 50% 50%;
+  }

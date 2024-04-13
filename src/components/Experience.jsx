@@ -7,7 +7,7 @@ export const Experience = () => {
   const { inSpanish } = useLanguageStore();
 
   const EXPERIENCIE = [
-    {
+    { id:1,
       date: inSpanish ? "Enero 2023 - Actualmente" : "January 2023 - Current",
       title: inSpanish ? "Ingeniero de Software Freelance" : "Software Developer Freelance",
       company: inSpanish ? "Independiente" : "Freelance",
@@ -18,6 +18,7 @@ export const Experience = () => {
       link: "https://www.linkedin.com/in/arromero491/",
     },
     {
+      id:2,
       date: inSpanish ? "Mayo 2016 - Actualmente" : "May 2016 - Current",
       title: inSpanish ? "Ingeniero de Construcción y Mantenimiento Staff" : "Construction and Maintenance Engineer Staff",
       company: "Uninet S.A. de C.V.",
@@ -32,10 +33,10 @@ export const Experience = () => {
   return (
 
 
-    <ol class="relative mt-16">
+    <ol className="relative mt-16">
       {
         EXPERIENCIE.map(experience => (
-          <li class="">
+          <li key={experience.id} className="">
             <ExperienceItem 
               date={experience.date}
               title={experience.title}

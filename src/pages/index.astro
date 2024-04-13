@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
-import AboutMe from "../components/AboutMe.astro"
+import {AboutMe} from "../components/AboutMe"
 import {Experience} from "../components/Experience";
-import Projects from "../components/Projects.astro";
+import {Projects} from "../components/Projects";
 import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro"
@@ -42,7 +42,7 @@ import ProjectSection from '../components/ProjectSection';
 				<CodeIcon class="size-7" />
 				<ProjectSection id={2} client:load />
 			</h2>
-			<Projects />
+			<Projects client:load/>
 		</SectionContainer>
 
 		<SectionContainer id="aboutme">
@@ -52,7 +52,7 @@ import ProjectSection from '../components/ProjectSection';
         <ProfileCheck class="size-8" />
         <ProjectSection id={3} client:load />
       </h2>
-      <AboutMe />
+      <AboutMe client:load/>
     </SectionContainer>
 	</div>
 	</main>

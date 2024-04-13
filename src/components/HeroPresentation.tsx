@@ -12,7 +12,7 @@ return (
 
 
 <p className="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-  {inSpanish? "+2 años de experiencia y un background en redes." : "+2 years of experience and a background in networking."}
+  {inSpanish? "+2 años de experiencia y un background en redes." : "+2 years of experience and background in networking."}
   <strong> {inSpanish ? "Desarrollador de Software" : "Software Developer."}</strong> {inSpanish ? "De Ciudad de México. Enfocado en desarrollo de aplicaciones web y móviles." : 
   "From Mexico City. Focused on web and mobile application development."}
 </p>
