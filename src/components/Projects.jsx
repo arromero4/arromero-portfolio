@@ -96,6 +96,7 @@ export const Projects = () => {
 
   const PROJECTS = [
     {
+      
       id: 1,
       title: "Travel Advisor",
       description:
@@ -108,7 +109,19 @@ export const Projects = () => {
       tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.NETLIFY, TAGS.GOOGLE],
     },
     {
+      
       id: 2,
+      title: "Portfolio",
+      description:
+        inSpanish ? "Portafolio de desarrollo de móvil, un espacio donde he recopilado los servicios que ofrezco y en los cuales puedo aplicar mis habilidades en el mundo de la programación. Este portafolio está construido utilizando Flutter como tecnología principal." 
+        :
+        "Mobile development portfolio, a space where I have compiled the services I offer and in which I can apply my skills in the world of programming. This portfolio is built using Flutter as the main technology.",
+      github: "https://github.com/arromero4/arromero_flutter_portfolio",
+      image: "/projects/project-portfolio-6.jpg",
+      tags: [TAGS.FLUTTER,],
+    },
+    {
+      id: 3,
       title: "Shopping App",
       description: inSpanish ?
        "Aplicación construida usando Flutter, para manejar el estado con Provider, permitiendo añadir la compra al carrito y borrarla, esta aplicación se adapta a la versión web con la misma base de código."
@@ -119,7 +132,7 @@ export const Projects = () => {
       tags: [TAGS.FLUTTER, TAGS.DART],
     },
     {
-      id: 3,
+      id: 4,
       title: "Valentine Day App",
       description:
         inSpanish ? 
@@ -132,7 +145,7 @@ export const Projects = () => {
       tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.NETLIFY],
     },
     {
-      id: 4,
+      id: 5,
       title: "Weather App",
       description: inSpanish ?
       "Aplicación construida usando Flutter, para consumir la API del clima de una ciudad especifica."
@@ -143,7 +156,7 @@ export const Projects = () => {
       tags: [TAGS.FLUTTER, TAGS.DART],
     },
     {
-      id: 5,
+      id: 6,
       title: "Currency Converter App",
       description: inSpanish ? 
       "Aplicación construida usando Flutter, para realizar la conversión de Dolar a Peso Mexicano."
